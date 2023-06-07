@@ -48,8 +48,6 @@ class Arbre:
                 new_list.append(item)
         return self.loop(new_list) if loop else new_list
 
-
-    
     def get_path(self):
         list_path = [self.valeur]
         if not(self.is_leaf()):
@@ -66,13 +64,6 @@ class Arbre:
                     new_list_path.append(list_path.copy() + retour_child)
             return new_list_path    
         return list_path
-
-
-    
-
-
-        
-
 
 
 #newArbre = Arbre(1)
