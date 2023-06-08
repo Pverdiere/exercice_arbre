@@ -6,7 +6,7 @@ random.seed(42)
 
 points = []
 
-for i in range(3):
+for i in range(8):
     points.append({i+1:[random.randrange(5000),random.randrange(5000)]})
 
 
@@ -26,7 +26,6 @@ def add_etage(arbre:Arbre,enfants:list):
 add_etage(racine,points)
 
 list_path = racine.get_path()
-print(list_path)
 list_distance = []
 for item in racine.get_path():
     distance = 0
@@ -41,7 +40,5 @@ for item in racine.get_path():
         tempo = coord
     list_distance.append(distance)
     print(item)
-print(min(list_distance))
-print(list_distance.index(min(list_distance)))
 print(list_distance)
 print(list_path[list_distance.index(min(list_distance))])
